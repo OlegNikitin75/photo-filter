@@ -15,36 +15,48 @@
 <body>
   <header class="header">
     <h1 class="header-title">Photo-filter</h1>
+    <button class="fullscreen openfullscreen"></button>
   </header>
   <main class="main">
     <div class="filters">
       <label>
-        Blur:
+        Blur:<span>0px</span>
         <input name="blur" data-sizing="px" type="range" min="0" max="10" value="0" />
         <output name="result">0</output>
       </label>
       <label>
-        Invert:
+        Invert:<span>0%</span>
         <input name="invert" data-sizing="%" type="range" min="0" max="100" value="0" />
         <output name="result">0</output>
       </label>
       <label>
-        Sepia:
+        Sepia:<span>0%</span>
         <input name="sepia" data-sizing="%" type="range" min="0" max="100" value="0" />
         <output name="result">0</output>
       </label>
       <label>
-        Saturate:
+        Saturate:<span>100%</span>
         <input name="saturate" data-sizing="%" type="range" min="0" max="200" value="100" />
         <output name="result">100</output>
       </label>
       <label>
-        Hue rotate:
+        Hue rotate:<span>0deg</span>
         <input name="hue" data-sizing="deg" type="range" min="0" max="360" value="0" />
         <output name="result">0</output>
       </label>
+      <label>
+        Brightness:<span>100%</span>
+        <input name="brightness" data-sizing="%" type="range" min="0" max="200" value="100" />
+        <output name="result">100</output>
+      </label>
+      <label>
+        Opacity:<span>100%</span>
+        <input name="opacity" data-sizing="%" type="range" min="0" max="100" value="100" />
+        <output name="result">100</output>
+      </label>
     </div>
     <div class="editor">
+      <img src="assets/img/img.jpg" width="672" height="420" alt="image" />
       <div class="btn-container">
         <button class="btn btn-reset">Reset</button>
         <button class="btn btn-next btn-active">Next picture</button>
@@ -53,21 +65,17 @@
           <input class="btn-load--input" id="btnInput" name="upload" type="file" placeholder="Load picture" />
         </label>
         <button class="btn btn-save">Save picture</button>
+        
+       
       </div>
-      <img src="assets/img/img.jpg" alt="image"/>
+      <button class="btn btn-open"></button>
     </div>
+    
   </main>
-  <footer class="footer">
-    <div class="footer-container">
-      <a class="github" href="#" target="_blank" rel="noopener noreferrer">github</a>
-      <a class="rss" href="https://rs.school/js/" target="_blank" rel="noopener">
-        <span class="rss-year">'21</span>
-      </a>
-    </div>
-  </footer>
+
   <canvas></canvas>
-  <button class="fullscreen openfullscreen"></button>
-  <script src="main.js"></script>
+
+  <script src="./main.js"></script>
 </body>
 
 </html>
